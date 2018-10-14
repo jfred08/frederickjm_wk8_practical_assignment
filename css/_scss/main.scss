@@ -1,0 +1,47 @@
+@import '_colors.scss';
+@import '_fonts.scss';
+@import '_urls.scss';
+@import '_mixins.scss'; /* mixins are below in case need to use variables in _colors.scss */
+
+// Your Google font here
+
+@import url('https://fonts.googleapis.com/css?family=Jura:500|Josefin+Slab');
+
+// Your CSS/SCSS below this line
+
+$debug: false; // Debug mode boolean
+
+* {
+  @if ($debug) {
+    border: 1px solid red;
+  }
+}
+
+body {
+  background-image: $url_2;
+	font-family: $font_0, $font_1, $font_2;
+  font-size: 18px;
+}
+
+@for $i from 1 through 6 { // Loop that sets the font face for all headings
+  h#{7 - $i} {
+    font-family: $font_3, $font_4, $font_5;
+  }
+}
+
+h1 {
+  color: $h1_color;
+}
+
+footer {
+  background-color: $footer_color;
+}
+
+.hero-top {
+	background: $url_1 no-repeat center top;
+	background-size: cover;
+}
+
+.container {
+  height: 400px;
+}
